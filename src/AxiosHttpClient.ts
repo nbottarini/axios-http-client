@@ -22,7 +22,7 @@ export class AxiosHttpClient implements HttpClient {
         new AuthErrorInterceptor(),
     ]
 
-    constructor(baseUrl: string, axiosAdapter: AxiosAdapter | undefined = axios.defaults.adapter) {
+    constructor(baseUrl: string | undefined = undefined, axiosAdapter: AxiosAdapter | undefined = axios.defaults.adapter) {
         this.baseUrl = baseUrl
         this.http = axios.create({
             baseURL: baseUrl,

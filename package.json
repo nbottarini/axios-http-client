@@ -1,6 +1,6 @@
 {
   "name": "@nbottarini/axios-http-client",
-  "version": "0.1.0",
+  "version": "0.6.1",
   "description": "Axios implementation for @nbottarini/abstract-http-client",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
