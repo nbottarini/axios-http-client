@@ -2,7 +2,6 @@ import axios, { AxiosAdapter, AxiosError, AxiosInstance, Method } from 'axios'
 import { ResponseFactory } from './ResponseFactory'
 import { AxiosUrlHelper } from './AxiosUrlHelper'
 import {
-    AuthErrorInterceptor,
     HttpClient,
     HttpError,
     HttpInterceptor,
@@ -19,7 +18,6 @@ export class AxiosHttpClient implements HttpClient {
     private interceptors: HttpInterceptor[] = []
     private errorInterceptors: HttpInterceptor[] = [
         new NetworkErrorInterceptor(),
-        new AuthErrorInterceptor(),
     ]
 
     constructor(baseUrl: string | undefined = undefined, axiosAdapter: AxiosAdapter | undefined = axios.defaults.adapter) {
